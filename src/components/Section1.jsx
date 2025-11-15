@@ -1,5 +1,14 @@
-import { Bolt, BriefcaseBusiness, CodeXml, DiamondPercent, Drone, Hourglass, LockKeyhole } from "lucide-react";
+import {
+  Bolt,
+  BriefcaseBusiness,
+  CodeXml,
+  DiamondPercent,
+  Drone,
+  Hourglass,
+  LockKeyhole,
+} from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Section1 = () => {
   const [Cards, setCards] = useState([
@@ -45,6 +54,19 @@ const Section1 = () => {
     },
   ]);
 
+  const cardVariants = {
+    hiddenLeft: { opacity: 0, x: -100, scale: 0.9 },
+    hiddenRight: { opacity: 0, x: 100, scale: 0.9 },
+    hiddenUp: { opacity: 0, y: 100, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
     <>
       <section className="w-full flex justify-center items-center pt-[10%] pb-[5%]">
@@ -62,7 +84,14 @@ const Section1 = () => {
           <div className="w-full h-full gap-3 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-center items-center">
             {Cards.map((card, index) => (
               <>
-                <div className="group w-full flex p-3 rounded justify-center items-center flex-col gap-y-3 h-[18em] bg-white shadow-xl hover:bg-blue-600 hover:scale-103 transition ease-in-out duration-200">
+                <motion.div
+                  variants={cardVariants}
+                  initial="hiddenRight"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.2 }}
+                  transition={{ delay: 0.3 }}
+                  className="group w-full flex p-3 rounded justify-center items-center flex-col gap-y-3 h-[18em] bg-white shadow-xl hover:bg-blue-600 hover:scale-103 transition ease-in-out duration-200"
+                >
                   {card.iconVal}
                   <h2 className="text-black group-hover:text-white text-xl font-semibold text-center">
                     {card.h2Val}
@@ -70,7 +99,7 @@ const Section1 = () => {
                   <p className="text-black group-hover:text-white text-[15px] max-w-[320px] text-center">
                     {card.pVal}
                   </p>
-                </div>
+                </motion.div>
               </>
             ))}
           </div>
