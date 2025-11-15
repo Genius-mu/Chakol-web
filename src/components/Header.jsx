@@ -161,8 +161,8 @@ const Header = () => {
         {/* MOBILE DROPDOWN */}
         <div
           className={`md:hidden flex flex-col gap-4 bg-black/90 text-white 
-            px-[7%] transition-all duration-300 overflow-hidden 
-            w-full ${isOpen ? "max-h-[300px] py-4" : "max-h-0 py-0"}`}
+  px-6 transition-all duration-300 overflow-hidden 
+  w-full ${isOpen ? "max-h-[300px] py-4" : "max-h-0 py-0"}`}
         >
           <Link className="text-white hover:text-blue-500 transition duration-200">
             Home
