@@ -110,7 +110,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full fixed top-0 left-0 z-50 bg-transparent">
+      <header className="w-full overflow-hidden fixed top-0 left-0 z-50 bg-transparent">
         {/* MAIN BAR */}
         <div className="w-full flex justify-center">
           <div
