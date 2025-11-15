@@ -114,9 +114,9 @@ const Header = () => {
         {/* MAIN BAR */}
         <div className="w-full flex justify-center">
           <div
-            className="w-[90%] flex justify-between items-center 
-               bg-[rgba(0,0,0,.25)] backdrop-blur-xl 
-               px-4 py-4 mt-3 rounded-2xl"
+            className="max-w-[90%] w-full flex justify-between items-center 
+    bg-[rgba(0,0,0,.25)] backdrop-blur-xl 
+    px-4 py-4 mt-3 rounded-2xl"
           >
             {/* LOGO */}
             <h1 className="text-xl md:text-2xl text-white font-bold uppercase [text-shadow:1px_1px_2px_#000]">
