@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -7,16 +8,34 @@ const Hero = () => {
       {/* <section className="w-full flex justify-center items-center py-[10%] bg-[url('/images/img1.webp')] bg-cover bg-center bg-fixed"> */}
       <section className="w-full flex justify-center items-center py-[25%] md:py-[17%] xl:py-[10%] bg-[url('/images/img1.webp')] bg-cover bg-center bg-fixed">
         <div className="w-[90%] flex flex-col justify-between gap-y-1 sm:gap-y-2">
-          <h2 className="text-white font-bold [text-shadow:1px_1px_2px_#000] text-xl sm:text-2xl md:text-3xl">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="text-white font-bold [text-shadow:1px_1px_2px_#000] text-xl sm:text-2xl md:text-3xl"
+          >
             Premium Hardwood
-          </h2>
-          <h2 className="text-white font-bold [text-shadow:1px_1px_2px_#000] text-xl sm:text-2xl md:text-3xl">
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="text-white font-bold [text-shadow:1px_1px_2px_#000] text-xl sm:text-2xl md:text-3xl"
+          >
             Charcoal Suppliers in France
-          </h2>
-          <p className="text-white text-[15px] [text-shadow:1px_1px_2px_#000] leading-5 max-w-[500px]">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="text-white text-[15px] [text-shadow:1px_1px_2px_#000] leading-5 max-w-[500px]"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
             ratione! Tempore enim mollitia optio vero!
-          </p>
+          </motion.p>
           <span className="flex justify-center mt-3 items-center w-fit h-fit gap-x-4">
             <Link
               to=""

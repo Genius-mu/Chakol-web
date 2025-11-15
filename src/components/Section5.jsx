@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Section5 = () => {
   const [Cards, setCards] = useState([
@@ -20,6 +21,19 @@ const Section5 = () => {
     },
   ]);
 
+  const fadeVariants = {
+    hiddenLeft: { opacity: 0, x: -100, scale: 0.95 },
+    hiddenRight: { opacity: 0, x: 100, scale: 0.95 },
+    hiddenUp: { opacity: 0, y: 100, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
     <>
       <section className="w-full flex justify-center items-center pt-[10%] pb-[5%]">
@@ -37,7 +51,15 @@ const Section5 = () => {
           <div className="w-full h-full gap-3 flex flex-wrap justify-center items-center">
             {Cards.map((card, index) => (
               <>
-                <div className="w-full md:w-[30%] flex justify-center gap-4 pb-5 flex-col h-fit bg-white shadow-xl hover:scale-101 transition ease-in-out duration-200">
+                <motion.div
+                  key={index}
+                  variants={fadeVariants}
+                  initial={index % 2 === 0 ? "hiddenLeft" : "hiddenRight"}
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.3 }}
+                  transition={{ delay: index * 0.2 }}
+                  className="w-full md:w-[30%] flex justify-center gap-4 pb-5 flex-col h-fit bg-white shadow-xl hover:scale-101 transition ease-in-out duration-200"
+                >
                   <div className="w-full h-[12em] overflow-hidden shadow-xl flex justify-center items-center">
                     <img
                       src={card.imgVal}
@@ -64,7 +86,7 @@ const Section5 = () => {
                       </span>
                     </Link>
                   </div>
-                </div>
+                </motion.div>
               </>
             ))}
           </div>

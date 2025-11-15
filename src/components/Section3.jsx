@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+
 const Section3 = () => {
   const [Cards, setCards] = useState([
     {
@@ -23,6 +25,19 @@ const Section3 = () => {
     },
   ]);
 
+  const cardVariants = {
+    hiddenLeft: { opacity: 0, x: -100, scale: 0.9 },
+    hiddenRight: { opacity: 0, x: 100, scale: 0.9 },
+    hiddenUp: { opacity: 0, y: 100, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
     <>
       <section className="w-full flex justify-center items-center pt-[10%] pb-[5%]">
@@ -40,7 +55,14 @@ const Section3 = () => {
           <div className="w-full h-full gap-3 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-center items-center">
             {Cards.map((card, index) => (
               <>
-                <div className="w-full flex rounded-t-xl justify-between items-center flex-col h-[20em] md:h-[18em] p-2 bg-white shadow-xl border-b-2 border-blue-500 hover:scale-101 transition ease-in-out duration-200">
+                <motion.div
+                  variants={cardVariants}
+                  initial="hiddenUp"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.2 }}
+                  transition={{ delay: 0.5 }}
+                  className="w-full flex rounded-t-xl justify-between items-center flex-col h-[20em] md:h-[18em] p-2 bg-white shadow-xl border-b-2 border-blue-500 hover:scale-101 transition ease-in-out duration-200"
+                >
                   <div className="w-full h-[50%] overflow-hidden border shadow-xl border-blue-600 rounded flex justify-center items-center">
                     <img
                       src={card.imgVal}
@@ -54,7 +76,7 @@ const Section3 = () => {
                   <p className="text-black text-[15px] max-w-[320px] text-center">
                     {card.pVal}
                   </p>
-                </div>
+                </motion.div>
               </>
             ))}
           </div>
