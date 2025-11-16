@@ -33,7 +33,7 @@ const Section2 = () => {
           </div>
           <div className="w-fit h-[20em] overflow-hidden border shadow-xl border-blue-600 rounded-t-[40%] rounded-br-[40%] p-1 flex justify-center items-center">
             <img
-              src="/images/img2.webp"
+              src="/images/img9.webp"
               alt=""
               className="object-center w-full h-full rounded-t-[40%] shadow-xl rounded-br-[40%]"
             />

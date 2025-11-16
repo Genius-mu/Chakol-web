@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <>
       {/* <section className="w-full flex justify-center items-center py-[10%] bg-[url('/images/img1.webp')] bg-cover bg-center bg-fixed"> */}
-      <section className="w-full flex justify-center items-center py-[25%] md:py-[17%] xl:py-[10%] bg-[url('/images/img1.webp')] bg-cover bg-center bg-fixed">
+      <section className="w-full flex justify-center items-center py-[25%] md:py-[17%] xl:py-[10%] bg-[url('/images/img10.webp')] bg-cover bg-center bg-fixed">
         <div className="w-[90%] flex flex-col justify-between gap-y-1 sm:gap-y-2">
           <motion.h2
             initial={{ opacity: 0 }}

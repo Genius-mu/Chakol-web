@@ -9,12 +9,12 @@ const Section3 = () => {
       pVal: "Lorem ipsum dolor sit elit. Possimus maiores eius nihil. Eum eos asperiores assumenda delectus modi",
     },
     {
-      imgVal: "/images/img5.webp",
+      imgVal: "/images/img6.webp",
       h2Val: "Eco-Friendly Charcoal",
       pVal: "Lorem ipsum dolor sit elit. Possimus maiores eius nihil. Eum eos asperiores assumenda delectus modi",
     },
     {
-      imgVal: "/images/img4.webp",
+      imgVal: "/images/img9.webp",
       h2Val: "Hardwood Lump Charcoal",
       pVal: "Lorem ipsum dolor sit elit. Possimus maiores eius nihil. Eum eos asperiores assumenda delectus modi",
     },
