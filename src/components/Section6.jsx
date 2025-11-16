@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Section6 = () => {
   return (
     <>
-      <section className="w-full bg-black/60 bg-[url(/images/img1.webp)] bg-blend-darken bg-cover bg-center flex justify-center items-center py-[6%]">
+      <section className="w-full bg-black/60 bg-[url(/images/img12.webp)] bg-blend-darken bg-cover bg-center flex justify-center items-center py-[6%]">
         <div className="w-[90%] flex justify-center items-center flex-col gap-y-4">
           <h2 className="font-bold text-xl sm:text-3xl [text-shadow:1px_1px_2px_#000] text-center text-white">
             Looking For a Hardwood Supplier in France

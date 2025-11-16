@@ -19,7 +19,7 @@ const Section3 = () => {
       pVal: "Lorem ipsum dolor sit elit. Possimus maiores eius nihil. Eum eos asperiores assumenda delectus modi",
     },
     {
-      imgVal: "/images/img3.webp",
+      imgVal: "/images/img11.webp",
       h2Val: "Restaurant Grade Charcoal",
       pVal: "Lorem ipsum dolor sit elit. Possimus maiores eius nihil. Eum eos asperiores assumenda delectus modi",
     },

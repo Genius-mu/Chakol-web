@@ -5,17 +5,17 @@ import { motion } from "framer-motion";
 const Section5 = () => {
   const [Cards, setCards] = useState([
     {
-      imgVal: "/images/img2.webp",
+      imgVal: "/images/img12.webp",
       h2Val: "Premium Hardwood Charcoal",
       pVal: "Lorem ipsum dolor sit elit. Possimus maiores eius nihil. Eum eos asperiores assumenda delectus modi",
     },
     {
-      imgVal: "/images/img5.webp",
+      imgVal: "/images/img10.webp",
       h2Val: "Eco-Friendly Charcoal",
       pVal: "Lorem ipsum dolor sit elit. Possimus maiores eius nihil. Eum eos asperiores assumenda delectus modi",
     },
     {
-      imgVal: "/images/img4.webp",
+      imgVal: "/images/img11.webp",
       h2Val: "Hardwood Lump Charcoal",
       pVal: "Lorem ipsum dolor sit elit. Possimus maiores eius nihil. Eum eos asperiores assumenda delectus modi",
     },
